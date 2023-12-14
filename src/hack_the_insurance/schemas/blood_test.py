@@ -1,11 +1,14 @@
+import datetime
+
 from pydantic import BaseModel, Field
 
 
 class BloodTestSchema(BaseModel):
     kind: str
-    unit: str = Field(alias="Birim")
     result: float = Field(alias="Sonuç")
-    reference: str = Field(alias="Referans")
+    test_at: datetime.datetime = Field(alias="Tarih")
+    unit: str | None = Field(alias="Birim", default=None)
+    reference: str | None = Field(alias="Referans", default=None)
 
     class Config:
         populate_by_name = True

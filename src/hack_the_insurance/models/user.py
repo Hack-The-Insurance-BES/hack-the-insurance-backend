@@ -1,17 +1,20 @@
 import datetime
-from typing import List
-from beanie import Link
+from beanie import Link, Document
 from pydantic import EmailStr, Field
 
-from .base import BaseDocument
 from .blood_test import BloodTestResult
 
 
-class User(BaseDocument):
+class User(Document):
     name: str
     height: float
     password: str
     email: EmailStr
+    family_name: str
     birth_date: datetime.datetime
-    blood_test_results: List[Link[BloodTestResult]] = Field(default=[])
+    blood_test_results: list[Link[BloodTestResult]] = Field(default=[])
+    created_at: datetime.datetime = Field(default=datetime.datetime.now())
+    updated_at: datetime.datetime = Field(default=datetime.datetime.now())
 
+    class Settings:
+        name = "user"

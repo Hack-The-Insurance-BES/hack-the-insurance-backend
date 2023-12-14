@@ -757,13 +757,13 @@ text-helpers = ["chardet (>=5.1.0,<6.0.0)"]
 
 [[package]]
 name = "langchain-community"
-version = "0.0.2"
+version = "0.0.3"
 description = "Community contributed LangChain integrations."
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "langchain_community-0.0.2-py3-none-any.whl", hash = "sha256:2af62f7917db26a83b4ca6a46f6fc9d65c6358256cbb516375d89817b9437493"},
-    {file = "langchain_community-0.0.2.tar.gz", hash = "sha256:178fb0005c9438a945cabec7cadc89e6ca4eb99abd4cb310bc82618ac8215268"},
+    {file = "langchain_community-0.0.3-py3-none-any.whl", hash = "sha256:12930ce0bcc39e86804f15e5a31029f836e694d3169b8b10972702760498cf6b"},
+    {file = "langchain_community-0.0.3.tar.gz", hash = "sha256:f5df5367504f3ca9c2faed390e2c55a338d236d823c61db4d1b237fbe239b04a"},
 ]
 
 [package.dependencies]
@@ -807,13 +807,13 @@ extended-testing = ["jinja2 (>=3,<4)"]
 
 [[package]]
 name = "langsmith"
-version = "0.0.69"
+version = "0.0.70"
 description = "Client library to connect to the LangSmith LLM Tracing and Evaluation Platform."
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "langsmith-0.0.69-py3-none-any.whl", hash = "sha256:49a2546bb83eedb0552673cf81a068bb08078d6d48471f4f1018e1d5c6aa46b1"},
-    {file = "langsmith-0.0.69.tar.gz", hash = "sha256:8fb5297f274db0576ec650d9bab0319acfbb6622d62bc5bb9fe31c6235dc0358"},
+    {file = "langsmith-0.0.70-py3-none-any.whl", hash = "sha256:a0d4cac3af94fe44c2ef3814c32b6740f92aebe267e395d62e62040bc5bad343"},
+    {file = "langsmith-0.0.70.tar.gz", hash = "sha256:3a546c45e67f6600d6669ef63f1f58b772e505703126338ad4f22fe0e2bbf677"},
 ]
 
 [package.dependencies]
@@ -1106,13 +1106,13 @@ files = [
 
 [[package]]
 name = "openai"
-version = "1.3.8"
+version = "1.3.9"
 description = "The official Python library for the openai API"
 optional = false
 python-versions = ">=3.7.1"
 files = [
-    {file = "openai-1.3.8-py3-none-any.whl", hash = "sha256:ac5a17352b96db862390d2e6f51de9f7eb32e733f412467b2f160fbd3d0f2609"},
-    {file = "openai-1.3.8.tar.gz", hash = "sha256:54963ff247abe185aad6ee443820e48ad9f87eb4de970acb2514bc113ced748c"},
+    {file = "openai-1.3.9-py3-none-any.whl", hash = "sha256:d30faeffe5995a2cf6b790c0260a5b59647e81c3a1f3b62f51b5e0a0e52681c9"},
+    {file = "openai-1.3.9.tar.gz", hash = "sha256:6f638d96bc89b4394be1d7b37d312f70a055df1a471c92d4c4b2ae3a70c98cb3"},
 ]
 
 [package.dependencies]
@@ -2208,4 +2208,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.5"
-content-hash = "9085e5ce87824b6bf111b848be8e2af1cd4fc8be85706acfc67991d9fa115793"
+content-hash = "0d2296041cdff1d32dda68613347581dbbfb2861e693cde439881ebe09b278f8"

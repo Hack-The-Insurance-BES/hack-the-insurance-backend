@@ -1,13 +1,19 @@
+import datetime
 from pydantic import Field
-from typing import Optional
+from beanie import Document
 
-from .base import BaseDocument
 from ..schemas.gpt_response import GptResponse
 
 
-class BloodTestResult(BaseDocument):
+class BloodTestResult(Document):
     kind: str
-    unit: str
     result: float
-    reference: str
-    gpt_response: Optional[GptResponse] = Field(default=None)
+    test_at: datetime.datetime
+    unit: str | None = Field(default=None)
+    reference: str | None = Field(default=None)
+    gpt_response: GptResponse | None = Field(default=None)
+    created_at: datetime.datetime = Field(default=datetime.datetime.now())
+    updated_at: datetime.datetime = Field(default=datetime.datetime.now())
+
+    class Settings:
+        name = "blood_test_result"

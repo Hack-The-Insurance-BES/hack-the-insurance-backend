@@ -1,0 +1,30 @@
+{
+  "Tam Kan Sayımı (Hemogram)": {
+    "Tarih": "03.10.2023",
+    "Sonuçlar": {
+      "Lökosit (WBC)": {"Sonuç": 12.11, "Birim": "10*3/uL", "Referans": "4,6 - 10,2"},
+      "Nötrofil oranı (NEUT%)": {"Sonuç": 73.2, "Birim": "%", "Referans": "40,3 - 74,8"},
+      "Lenfosit oranı (LYMPH%)": {"Sonuç": 18.2, "Birim": "%", "Referans": "12,2 - 47,1"},
+      "Monosit oranı (MONO%)": {"Sonuç": 8.2, "Birim": "%", "Referans": "4,4 - 12,3"},
+      "Eozinofil oranı (EO%)": {"Sonuç": 0.2, "Birim": "%", "Referans": "0 - 7"},
+      "Nötrofil mutlak sayı/Lenfosit mutlak sayı": {"Sonuç": 4.01},
+      "Bazofil oranı (BASO%)": {"Sonuç": 10.2, "Birim": "%", "Referans": "0 - 1,2"},
+      "Nötrofil mutlak sayısı (NEUT#)": {"Sonuç": 8.87, "Birim": "10*3/uL", "Referans": "1,82 - 7,42"},
+      "Lenfosit mutlak sayısı (LYMPH#)": {"Sonuç": 2.21, "Birim": "10*3/uL", "Referans": "0,85 - 3"},
+      "Monosit mutlak sayısı (MONO#)": {"Sonuç": 0.99, "Birim": "10*3/uL", "Referans": "0,19 - 0,77"},
+      "Eozinofil mutlak sayısı (EO#)": {"Sonuç": 0.02, "Birim": "10*3/uL", "Referans": "0,03 - 0,7"},
+      "Bazofil mutlak sayısı (BASO#)": {"Sonuç": 0.02, "Birim": "10*3/uL", "Referans": "0,01 - 0,2"},
+      "Eritrosit (RBC)": {"Sonuç": 4.30, "Birim": "10*6/uL", "Referans": "4,5 - 5,9"},
+      "Hemoglobin (HGB)": {"Sonuç": 13.4, "Birim": "g/dL", "Referans": "13 - 17,5"},
+      "Hematokrit (HCT)": {"Sonuç": 39.5, "Birim": "%", "Referans": "40 - 52"},
+      "Ortalama eritrosit hacmi (MCV)": {"Sonuç": 91.9, "Birim": "fL", "Referans": "80 - 97"},
+      "Ortalama eritrosit hemoglobini (MCH)": {"Sonuç": 31.2, "Birim": "pg", "Referans": "25 - 34"},
+      "Ortalama eritrosit hemoglobini (MCHC)": {"Sonuç": 33.9, "Birim": "g/dL", "Referans": "30 - 36"},
+      "Trombosit (PLT)": {"Sonuç": 256, "Birim": "10*3/uL", "Referans": "142 - 424"},
+      "Ortalama trombosit hacmi (MPV)": {"Sonuç": 9.5, "Birim": "fL", "Referans": "9,7 - 11,9"},
+      "Trombosit dağılım genişliği (PDW)": {"Sonuç": 10.3, "Birim": "fL", "Referans": "9,5 - 15,2"},
+      "Plateletkrit (PCT)": {"Sonuç": 0.24, "Birim": "%", "Referans": "0,17 - 0,4"},
+      "Eritrosit dağılım genişliği (RDW-CV)": {"Sonuç": 12.4, "Birim": "%", "Referans": "14,2 - 17,6"}
+    }
+  }
+}
