@@ -15,6 +15,3 @@ class User(Document):
     blood_test_results: list[Link[BloodTestResult]] = Field(default=[])
     created_at: datetime.datetime = Field(default=datetime.datetime.now())
     updated_at: datetime.datetime = Field(default=datetime.datetime.now())
-
-    class Settings:
-        name = "user"

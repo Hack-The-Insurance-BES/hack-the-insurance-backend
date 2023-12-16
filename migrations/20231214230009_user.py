@@ -1,11 +1,10 @@
-import os, sys
+import os
+import sys
 
-import beanie
-
-myPath = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, myPath + "/../")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + "/../")
 
 import json
+import beanie
 import datetime
 from beanie import free_fall_migration
 
@@ -15,15 +14,11 @@ from src.hack_the_insurance.schemas.blood_test import BloodTestSchema
 
 
 class Forward:
-    @free_fall_migration(document_models=[User, BloodTestResult])
-    async def default_creations(self, session):
-        print(os.getcwd())
-        with open(f"{os.getcwd()}/migrations/static/mock_blood_test.json") as f:
-            raw_blood_test_results = json.load(f)["Tam Kan Sayımı (Hemogram)"]
-
-        blood_test_date = datetime.datetime.strptime(
-            raw_blood_test_results["Tarih"], "%d.%m.%Y"
-        )
+    @free_fall_migration(document_models=[User])
+    async def user_migration(self, session):
+        exists = await User.find({User.email: "furkanmelihercan.98@gmail.com"}).exists()
+        if exists is True:
+            return
 
         default_user = User(
             id=beanie.PydanticObjectId(),
@@ -33,21 +28,12 @@ class Forward:
             password="test",
             email="furkanmelihercan.98@gmail.com",
             birth_date=datetime.datetime(year=1998, day=30, month=8),
-            blood_test_results=[
-                BloodTestResult(
-                    id=beanie.PydanticObjectId(),
-                    **BloodTestSchema(
-                        **results, kind=result_kind, test_at=blood_test_date
-                    ).model_dump()
-                )
-                for result_kind, results in raw_blood_test_results["Sonuçlar"].items()
-            ],
+            blood_test_results=[],
         )
-        print(default_user.id)
-        await default_user.replace(session=session)
+        await User.insert_one(default_user)
 
 
 class Backward:
-    @free_fall_migration(document_models=[User, BloodTestResult])
-    async def revert_default_creations(self, session):
-        pass
+    @free_fall_migration(document_models=[User])
+    async def user_revert_migration(self, session):
+        await User.find({User.email: "furkanmelihercan.98@gmail.com"}).delete()
