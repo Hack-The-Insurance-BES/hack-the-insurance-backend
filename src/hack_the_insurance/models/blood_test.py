@@ -14,3 +14,6 @@ class BloodTestResult(Document):
     gpt_response: GptResponse | None = Field(default=None)
     created_at: datetime.datetime = Field(default=datetime.datetime.now())
     updated_at: datetime.datetime = Field(default=datetime.datetime.now())
+
+    class Settings:
+        name = "blood_test_result"
